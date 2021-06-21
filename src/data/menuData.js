@@ -1,5 +1,5 @@
 export const menuData = [
-  { title: "courses", icon: "/images/icons/courses.svg", link: "/courses" },
+  { title: "Courses", icon: "/images/icons/courses.svg", link: "/courses" },
   {
     title: "Tutorials",
     icon: "/images/icons/tutorials.svg",
