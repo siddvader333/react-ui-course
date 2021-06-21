@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const MenuButton = ({ item }) => {
+const MenuButton = ({ item, onclick }) => {
   return (
-    <Link to={item.link}>
+    <Link to={item.link} onClick={onclick}>
       <MenuItem title={item.title}>
         <img src={item.icon} alt={item.title} />
         {item.title}

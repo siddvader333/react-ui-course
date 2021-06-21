@@ -8,6 +8,11 @@ import MenuTooltip from "../tooltips/MenuTooltip"
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
+  const handleClick = event => {
+    setIsOpen(!isOpen)
+    event.preventDefault()
+  }
+
   return (
     <Wrapper
       onClick={() => {
@@ -21,7 +26,11 @@ const Header = () => {
       <MenuWrapper count={menuData.length}>
         {menuData.map((item, index) =>
           item.link === "/account" ? (
-            <MenuButton key={index} item={item} />
+            <MenuButton
+              onclick={event => handleClick(event)}
+              key={index}
+              item={item}
+            />
           ) : (
             <MenuButton key={index} item={item} />
           )
