@@ -6,18 +6,28 @@ import MenuButton from "../buttons/MenuButtons"
 import MenuTooltip from "../tooltips/MenuTooltip"
 
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
+
   return (
-    <Wrapper>
+    <Wrapper
+      onClick={() => {
+        setIsOpen(!isOpen)
+      }}
+    >
       <Link to="/">
         <img alt="logo" src="/images/logos/logo.svg" />
       </Link>
 
       <MenuWrapper count={menuData.length}>
-        {menuData.map((item, index) => (
-          <MenuButton key={index} item={item} />
-        ))}
+        {menuData.map((item, index) =>
+          item.link === "/account" ? (
+            <MenuButton key={index} item={item} />
+          ) : (
+            <MenuButton key={index} item={item} />
+          )
+        )}
       </MenuWrapper>
-      <MenuTooltip />
+      <MenuTooltip isOpen={isOpen} />
     </Wrapper>
   )
 }
