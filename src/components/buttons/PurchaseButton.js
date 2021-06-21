@@ -7,8 +7,14 @@ const PurchaseButton = ({ title, subtitle }) => {
   return (
     <Link to="/page-2">
       <Wrapper>
-        <Title>{title || "Pro Access"}</Title>
-        <Subtitle>{subtitle || "$19 per month"}</Subtitle>
+        <IconWrapper>
+          <Icon src="/images/icons/credit.svg" />
+          <Ring src="images/icons/icon-ring.svg" />
+        </IconWrapper>
+        <TextWrapper>
+          <Title>{title || "Pro Access"}</Title>
+          <Subtitle>{subtitle || "$19 per month"}</Subtitle>
+        </TextWrapper>
       </Wrapper>
     </Link>
   )
@@ -24,6 +30,15 @@ const Wrapper = styled.h1`
   width: 280px;
   height: 77px;
   padding: 12px;
+  display: grid;
+  grid-template-columns: 53px auto;
+  align-items: center;
+  gap: 20px;
+`
+
+const TextWrapper = styled.div`
+  display: grid;
+  gap: 4px;
 `
 
 const Title = styled(Caption2)`
@@ -33,4 +48,27 @@ const Title = styled(Caption2)`
 const Subtitle = styled(SmallText)`
   color: #595c7b;
   opacity: 0.7;
+`
+
+const Icon = styled.img`
+  width: 29px;
+  height: 29px;
+`
+const Ring = styled.img`
+  position: absolute;
+  top: -15px;
+  left: -16px;
+`
+
+const IconWrapper = styled.div`
+  background: linear-gradient(200.44deg, #4316db 13.57%, #9076e7 98.38%);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
 `
