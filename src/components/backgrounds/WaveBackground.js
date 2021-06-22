@@ -1,5 +1,4 @@
 import React from "react"
-
 import styled from "styled-components"
 
 const WaveBackground = () => {
@@ -11,7 +10,7 @@ const WaveBackground = () => {
         style={{ top: "100px", filter: "blur(60px)" }}
       />
       <Wave src="/images/waves/hero-wave2.svg" style={{ top: "350px" }} />
-      <Wave src="/images/waves/hero-wave3.svg" style={{ top: "550px" }} />
+      <BottomWave src="/images/waves/hero-wave3.svg" style={{ top: "550px" }} />
     </Wrapper>
   )
 }

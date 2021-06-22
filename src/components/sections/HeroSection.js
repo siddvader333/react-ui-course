@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { H1, MediumText } from "../styles/TextStyles"
-import { themes } from "../styles/ColorStyles"
 import PurchaseButton from "../buttons/PurchaseButton"
 import MockupAnimation from "../animations/MockupAnimation"
 import WaveBackground from "../backgrounds/WaveBackground"

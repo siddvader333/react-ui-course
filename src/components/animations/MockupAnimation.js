@@ -18,6 +18,7 @@ export default MockupAnimation
 const Wrapper = styled.div`
   position: relative;
   perspective: 5000;
+  transform: scale(0.8) translateY(-30px);
 
   @media (max-width: 768px) {
     transform: scale(0.6);
@@ -41,7 +42,7 @@ const Wrapper = styled.div`
   :hover div {
     transform: rotateY(0deg) rotateX(0deg);
     &.mockup1 {
-      transition-delay: 0.1s;
+      transition-delay: 0.2s;
       transform: translate(-20px, -30px);
     }
     &.mockup2 {
@@ -49,10 +50,10 @@ const Wrapper = styled.div`
       transform: translate(0, -30px);
     }
     &.mockup3 {
-      transition-delay: 0s;
+      transition-delay: 0.2s;
     }
     &.mockup4 {
-      transition-delay: 0.1s;
+      transition-delay: 0.2s;
       transform: translate(-120px, 30px);
     }
     &.mockup5 {
