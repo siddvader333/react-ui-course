@@ -14,11 +14,7 @@ const Header = () => {
   }
 
   return (
-    <Wrapper
-      onClick={() => {
-        setIsOpen(!isOpen)
-      }}
-    >
+    <Wrapper>
       <Link to="/">
         <img alt="logo" src="/images/logos/logo.svg" />
       </Link>
